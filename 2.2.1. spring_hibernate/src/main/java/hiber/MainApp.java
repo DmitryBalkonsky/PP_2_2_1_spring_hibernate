@@ -16,7 +16,6 @@ public class MainApp {
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
         UserService userService = context.getBean(UserService.class);
-        CarService carService = context.getBean(CarService.class);
 
         Car car1 = new Car("test1", 1);
         Car car2 = new Car("test2", 2);
@@ -38,9 +37,6 @@ public class MainApp {
         userService.add(user3);
         userService.add(user4);
 
-        System.out.println("----------------------------------------------------------");
-        System.out.println(carService.getUserByCar("test1", 1));
-        System.out.println("----------------------------------------------------------");
 
         List<User> users = userService.listUsers();
         for (User user : users) {
