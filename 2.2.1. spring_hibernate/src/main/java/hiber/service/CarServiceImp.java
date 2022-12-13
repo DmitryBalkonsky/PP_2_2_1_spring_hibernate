@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class CarServiceImp implements CarService {
     @Autowired
     private CarDao carDao;
+
     @Transactional(readOnly = true)
     @Override
     public User getUserByCar(String parModel, int parSeries) {
